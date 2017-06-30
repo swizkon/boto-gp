@@ -1,6 +1,0 @@
-<h2>Edit journey</h2>
-
-<%= render "form.html", changeset: @changeset,
-                        action: journey_path(@conn, :update, @journey) %>
-
-<%= link "Back", to: journey_path(@conn, :index) %>

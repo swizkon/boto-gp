@@ -1,0 +1,28 @@
+<h2>Listing seasons</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for season <- @seasons do %>
+    <tr>
+      <td><%= season.name %></td>
+      <td><%= season.description %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: season_path(@conn, :show, season), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: season_path(@conn, :edit, season), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: season_path(@conn, :delete, season), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New season", to: season_path(@conn, :new) %>

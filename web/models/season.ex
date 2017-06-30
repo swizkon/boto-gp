@@ -1,18 +1,19 @@
-defmodule BotoGP.Journey do
+defmodule BotoGP.Season do
   use BotoGP.Web, :model
 
     use Ecto.Schema
 
     import Ecto.Changeset
     
-  schema "journeys" do
+  schema "seasons" do
     field :name, :string
+    field :ticket, :string
     field :description, :string
 
     timestamps
   end
 
-  @required_fields ~w(name description)
+  @required_fields ~w(name ticket description)
   @optional_fields ~w()
 
   @doc """
@@ -20,8 +21,8 @@ defmodule BotoGP.Journey do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:name, :description])
-    |> validate_required([:name, :description])
+    |> cast(params, [:name, :ticket, :description])
+    |> validate_required([:name, :ticket, :description])
   end
 
   # def changeset(model, params \\ :empty) do
