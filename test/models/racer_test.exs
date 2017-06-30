@@ -3,7 +3,7 @@ defmodule BotoGP.RacerTest do
 
   alias BotoGP.Racer
 
-  @valid_attrs %{description: "some content", title: "some content"}
+  @valid_attrs %{description: "some content", name: "some content"}
   @invalid_attrs %{}
 
   test "changeset with valid attributes" do

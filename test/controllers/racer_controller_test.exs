@@ -2,7 +2,7 @@ defmodule BotoGP.RacerControllerTest do
   use BotoGP.ConnCase
 
   alias BotoGP.Racer
-  @valid_attrs %{description: "some content", title: "some content"}
+  @valid_attrs %{description: "some content", name: "some name"}
   @invalid_attrs %{}
 
   test "lists all entries on index", %{conn: conn} do
