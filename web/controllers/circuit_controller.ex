@@ -1,7 +1,7 @@
-defmodule SomedayIsle.CircuitController do
-  use SomedayIsle.Web, :controller
+defmodule BotoGP.CircuitController do
+  use BotoGP.Web, :controller
 
-  alias SomedayIsle.Circuit
+  alias BotoGP.Circuit
 
   def options(conn, _params) do
     conn
@@ -44,7 +44,7 @@ defmodule SomedayIsle.CircuitController do
       {:error, changeset} ->
         conn
         |> put_status(:unprocessable_entity)
-        |> render(SomedayIsle.ChangesetView, "error.json", changeset: changeset)
+        |> render(BotoGP.ChangesetView, "error.json", changeset: changeset)
     end
   end
 
@@ -63,7 +63,7 @@ defmodule SomedayIsle.CircuitController do
       {:error, changeset} ->
         conn
         |> put_status(:unprocessable_entity)
-        |> render(SomedayIsle.ChangesetView, "error.json", changeset: changeset)
+        |> render(BotoGP.ChangesetView, "error.json", changeset: changeset)
     end
   end
 

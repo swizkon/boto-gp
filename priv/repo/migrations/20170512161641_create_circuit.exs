@@ -1,4 +1,4 @@
-defmodule SomedayIsle.Repo.Migrations.CreateCircuit do
+defmodule BotoGP.Repo.Migrations.CreateCircuit do
   use Ecto.Migration
 
   def change do

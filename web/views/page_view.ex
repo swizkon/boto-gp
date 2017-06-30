@@ -1,3 +1,3 @@
-defmodule SomedayIsle.PageView do
-  use SomedayIsle.Web, :view
+defmodule BotoGP.PageView do
+  use BotoGP.Web, :view
 end

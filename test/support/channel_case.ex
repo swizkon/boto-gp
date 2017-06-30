@@ -1,4 +1,4 @@
-defmodule SomedayIsle.ChannelCase do
+defmodule BotoGP.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -20,22 +20,22 @@ defmodule SomedayIsle.ChannelCase do
       # Import conveniences for testing with channels
       use Phoenix.ChannelTest
 
-      alias SomedayIsle.Repo
+      alias BotoGP.Repo
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
 
 
       # The default endpoint for testing
-      @endpoint SomedayIsle.Endpoint
+      @endpoint BotoGP.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(SomedayIsle.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(BotoGP.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(SomedayIsle.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(BotoGP.Repo, {:shared, self()})
     end
 
     :ok

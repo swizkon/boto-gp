@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Someday Isle</title>
+    <title>Boto GP</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>" />
     
   </head>
@@ -22,7 +22,7 @@
             <li><a href="/tour">Tour</a></li>
           </ul>
         </nav>
-        <h3 class="">Someday Isle</h3>
+        <h3 class="">Boto GP</h3>
       </header>
 
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>

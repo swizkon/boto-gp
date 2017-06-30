@@ -6,15 +6,15 @@
 use Mix.Config
 
 # General application configuration
-config :someday_isle,
-  ecto_repos: [SomedayIsle.Repo]
+config :boto_gp,
+  ecto_repos: [BotoGP.Repo]
 
 # Configures the endpoint
-config :someday_isle, SomedayIsle.Endpoint,
+config :boto_gp, BotoGP.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "N5oENYsaQHnLE2KAGx9iDcwWZNK+QExKQGO0/ZhaArFfdFOizlaY0v4h4HWqfxJp",
-  render_errors: [view: SomedayIsle.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: SomedayIsle.PubSub,
+  render_errors: [view: BotoGP.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: BotoGP.PubSub,
            adapter: Phoenix.PubSub.PG2]
            
 # Configures Elixir's Logger

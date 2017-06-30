@@ -1,4 +1,4 @@
-defmodule SomedayIsle.Repo.Migrations.CreatePitstop do
+defmodule BotoGP.Repo.Migrations.CreatePitstop do
   use Ecto.Migration
 
   def change do

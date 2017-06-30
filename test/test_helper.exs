@@ -1,4 +1,4 @@
 ExUnit.start
 
-Ecto.Adapters.SQL.Sandbox.mode(SomedayIsle.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(BotoGP.Repo, :manual)
 

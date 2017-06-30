@@ -1,3 +1,3 @@
-defmodule SomedayIsle.PitstopView do
-  use SomedayIsle.Web, :view
+defmodule BotoGP.PitstopView do
+  use BotoGP.Web, :view
 end

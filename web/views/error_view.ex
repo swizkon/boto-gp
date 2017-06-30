@@ -1,5 +1,5 @@
-defmodule SomedayIsle.ErrorView do
-  use SomedayIsle.Web, :view
+defmodule BotoGP.ErrorView do
+  use BotoGP.Web, :view
 
   def render("404.html", _assigns) do
     "Page not found"

@@ -1,7 +1,7 @@
-defmodule SomedayIsle.PitstopTest do
-  use SomedayIsle.ModelCase
+defmodule BotoGP.PitstopTest do
+  use BotoGP.ModelCase
 
-  alias SomedayIsle.Pitstop
+  alias BotoGP.Pitstop
 
   @valid_attrs %{description: "some content", title: "some content"}
   @invalid_attrs %{}

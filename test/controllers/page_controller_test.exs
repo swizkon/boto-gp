@@ -1,5 +1,5 @@
-defmodule SomedayIsle.PageControllerTest do
-  use SomedayIsle.ConnCase
+defmodule BotoGP.PageControllerTest do
+  use BotoGP.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"

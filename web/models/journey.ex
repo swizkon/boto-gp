@@ -1,5 +1,5 @@
-defmodule SomedayIsle.Journey do
-  use SomedayIsle.Web, :model
+defmodule BotoGP.Journey do
+  use BotoGP.Web, :model
 
     use Ecto.Schema
 

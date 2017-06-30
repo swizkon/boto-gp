@@ -2,7 +2,7 @@ use Mix.Config
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :someday_isle, SomedayIsle.Endpoint,
+config :boto_gp, BotoGP.Endpoint,
   http: [port: 4001],
   server: false
 
@@ -10,10 +10,10 @@ config :someday_isle, SomedayIsle.Endpoint,
 config :logger, level: :warn
 
 # Configure your database
-config :someday_isle, SomedayIsle.Repo,
+config :boto_gp, BotoGP.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  database: "someday_isle_test",
+  database: "boto_gp_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

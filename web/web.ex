@@ -1,12 +1,12 @@
-defmodule SomedayIsle.Web do
+defmodule BotoGP.Web do
   @moduledoc """
   A module that keeps using definitions for controllers,
   views and so on.
 
   This can be used in your application as:
 
-      use SomedayIsle.Web, :controller
-      use SomedayIsle.Web, :view
+      use BotoGP.Web, :controller
+      use BotoGP.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -30,12 +30,12 @@ defmodule SomedayIsle.Web do
     quote do
       use Phoenix.Controller
 
-      alias SomedayIsle.Repo
+      alias BotoGP.Repo
       import Ecto
       import Ecto.Query
 
-      import SomedayIsle.Router.Helpers
-      import SomedayIsle.Gettext
+      import BotoGP.Router.Helpers
+      import BotoGP.Gettext
     end
   end
 
@@ -49,9 +49,9 @@ defmodule SomedayIsle.Web do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import SomedayIsle.Router.Helpers
-      import SomedayIsle.ErrorHelpers
-      import SomedayIsle.Gettext
+      import BotoGP.Router.Helpers
+      import BotoGP.ErrorHelpers
+      import BotoGP.Gettext
     end
   end
 
@@ -65,10 +65,10 @@ defmodule SomedayIsle.Web do
     quote do
       use Phoenix.Channel
 
-      alias SomedayIsle.Repo
+      alias BotoGP.Repo
       import Ecto
       import Ecto.Query
-      import SomedayIsle.Gettext
+      import BotoGP.Gettext
     end
   end
 

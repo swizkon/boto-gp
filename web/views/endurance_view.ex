@@ -1,6 +1,6 @@
-defmodule SomedayIsle.EnduranceView do
-  use SomedayIsle.Web, :view
-  import SomedayIsle.Router.Helpers
+defmodule BotoGP.EnduranceView do
+  use BotoGP.Web, :view
+  import BotoGP.Router.Helpers
 
 
   #def render("index.html", %{circuits: circuits}) do

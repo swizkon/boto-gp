@@ -1,7 +1,7 @@
-defmodule SomedayIsle.JourneyControllerTest do
-  use SomedayIsle.ConnCase
+defmodule BotoGP.JourneyControllerTest do
+  use BotoGP.ConnCase
 
-  alias SomedayIsle.Journey
+  alias BotoGP.Journey
   @valid_attrs %{description: "some content", name: "some content"}
   @invalid_attrs %{}
 

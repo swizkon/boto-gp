@@ -1,10 +1,10 @@
-defmodule SomedayIsle.Pitstop do
-  use SomedayIsle.Web, :model
+defmodule BotoGP.Pitstop do
+  use BotoGP.Web, :model
 
   schema "pitstops" do
     field :title, :string
     field :description, :string
-    belongs_to :journey, SomedayIsle.Journey
+    belongs_to :journey, BotoGP.Journey
 
     timestamps()
   end

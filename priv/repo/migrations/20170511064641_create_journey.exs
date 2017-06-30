@@ -1,4 +1,4 @@
-defmodule SomedayIsle.Repo.Migrations.CreateJourney do
+defmodule BotoGP.Repo.Migrations.CreateJourney do
   use Ecto.Migration
 
   def change do

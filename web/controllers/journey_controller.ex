@@ -1,9 +1,9 @@
-defmodule SomedayIsle.JourneyController do
-  use SomedayIsle.Web, :controller
+defmodule BotoGP.JourneyController do
+  use BotoGP.Web, :controller
 
-  #import SomedayIsle.Router.Helpers
+  #import BotoGP.Router.Helpers
 
-  alias SomedayIsle.Journey
+  alias BotoGP.Journey
 
   def index(conn, _params) do
     journeys = Repo.all(Journey)

@@ -1,14 +1,14 @@
-defmodule SomedayIsle.Endpoint do
-  use Phoenix.Endpoint, otp_app: :someday_isle
+defmodule BotoGP.Endpoint do
+  use Phoenix.Endpoint, otp_app: :boto_gp
 
-  socket "/socket", SomedayIsle.UserSocket
+  socket "/socket", BotoGP.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phoenix.digest
   # when deploying your static files in production.
   plug Plug.Static,
-    at: "/", from: :someday_isle, gzip: false,
+    at: "/", from: :boto_gp, gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
   # Code reloading can be explicitly enabled under the
@@ -35,10 +35,10 @@ defmodule SomedayIsle.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   plug Plug.Session,
     store: :cookie,
-    key: "_someday_isle_key",
+    key: "_boto_gp_key",
     signing_salt: "35902mNt"
   
   plug CORSPlug
 
-  plug SomedayIsle.Router
+  plug BotoGP.Router
 end

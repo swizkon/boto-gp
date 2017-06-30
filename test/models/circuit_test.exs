@@ -1,7 +1,7 @@
-defmodule SomedayIsle.CircuitTest do
-  use SomedayIsle.ModelCase
+defmodule BotoGP.CircuitTest do
+  use BotoGP.ModelCase
 
-  alias SomedayIsle.Circuit
+  alias BotoGP.Circuit
 
   @valid_attrs %{checkpoints: "some content", height: 42, name: "some content", scale: 42, width: 42}
   @invalid_attrs %{}

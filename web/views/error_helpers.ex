@@ -1,4 +1,4 @@
-defmodule SomedayIsle.ErrorHelpers do
+defmodule BotoGP.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -32,9 +32,9 @@ defmodule SomedayIsle.ErrorHelpers do
     #     dgettext "errors", "is invalid"
     #
     if count = opts[:count] do
-      Gettext.dngettext(SomedayIsle.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(BotoGP.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(SomedayIsle.Gettext, "errors", msg, opts)
+      Gettext.dgettext(BotoGP.Gettext, "errors", msg, opts)
     end
   end
 end

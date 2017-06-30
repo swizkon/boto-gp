@@ -1,8 +1,8 @@
-defmodule SomedayIsle.CircuitView do
-  use SomedayIsle.Web, :view
+defmodule BotoGP.CircuitView do
+  use BotoGP.Web, :view
 
   #def render("index.json", %{circuits: circuits}) do
-  #  %{data: render_many(circuits, SomedayIsle.CircuitView, "circuit.json")}
+  #  %{data: render_many(circuits, BotoGP.CircuitView, "circuit.json")}
   #end
 
   def render("index.json", %{circuits: circuits}) do
@@ -10,7 +10,7 @@ defmodule SomedayIsle.CircuitView do
   end
 
   def render("show.json", %{circuit: circuit}) do
-    %{data: render_one(circuit, SomedayIsle.CircuitView, "circuit.json")}
+    %{data: render_one(circuit, BotoGP.CircuitView, "circuit.json")}
   end
 
   def render("circuit.json", %{circuit: circuit}) do

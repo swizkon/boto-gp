@@ -1,7 +1,7 @@
-defmodule SomedayIsle.EnduranceController do
-  use SomedayIsle.Web, :controller
+defmodule BotoGP.EnduranceController do
+  use BotoGP.Web, :controller
 
-  alias SomedayIsle.Circuit
+  alias BotoGP.Circuit
 
   def index(conn, _params) do
     circuits = Repo.all(Circuit)

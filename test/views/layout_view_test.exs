@@ -1,3 +1,3 @@
-defmodule SomedayIsle.LayoutViewTest do
-  use SomedayIsle.ConnCase, async: true
+defmodule BotoGP.LayoutViewTest do
+  use BotoGP.ConnCase, async: true
 end

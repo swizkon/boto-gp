@@ -1,3 +1,3 @@
-defmodule SomedayIsle.Repo do
-  use Ecto.Repo, otp_app: :someday_isle
+defmodule BotoGP.Repo do
+  use Ecto.Repo, otp_app: :boto_gp
 end

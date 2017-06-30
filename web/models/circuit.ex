@@ -1,5 +1,5 @@
-defmodule SomedayIsle.Circuit do
-  use SomedayIsle.Web, :model
+defmodule BotoGP.Circuit do
+  use BotoGP.Web, :model
 
   schema "circuits" do
     field :name, :string

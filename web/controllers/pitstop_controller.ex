@@ -1,7 +1,7 @@
-defmodule SomedayIsle.PitstopController do
-  use SomedayIsle.Web, :controller
+defmodule BotoGP.PitstopController do
+  use BotoGP.Web, :controller
 
-  alias SomedayIsle.Pitstop
+  alias BotoGP.Pitstop
 
   def index(conn, _params) do
     pitstops = Repo.all(Pitstop)

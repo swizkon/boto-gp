@@ -1,5 +1,5 @@
-defmodule SomedayIsle.Router do
-  use SomedayIsle.Web, :router
+defmodule BotoGP.Router do
+  use BotoGP.Web, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,13 +13,13 @@ defmodule SomedayIsle.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", SomedayIsle do
+  scope "/", BotoGP do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
   end
 
-  scope "/journeys", SomedayIsle do  
+  scope "/journeys", BotoGP do  
     pipe_through :browser # Use the default browser stack
     get "/edit/:journeyid", JourneyController, :edit
     get "/", JourneyController, :index
@@ -30,7 +30,7 @@ defmodule SomedayIsle.Router do
     put "/:journeyid", JourneyController, :update
   end
 
-  scope "/pitstops", SomedayIsle do  
+  scope "/pitstops", BotoGP do  
     pipe_through :browser # Use the default browser stack
     get "/edit/:id", PitstopController, :edit
     get "/", PitstopController, :index
@@ -41,7 +41,7 @@ defmodule SomedayIsle.Router do
     put "/:id", PitstopController, :update
   end
 
-  scope "/endurance", SomedayIsle do  
+  scope "/endurance", BotoGP do  
     pipe_through :browser # Use the default browser stack
     get "/edit/:id", EnduranceController, :edit
     get "/", EnduranceController, :index
@@ -50,7 +50,7 @@ defmodule SomedayIsle.Router do
   end
 
   # Other scopes may use custom stacks.
-  scope "/api", SomedayIsle do
+  scope "/api", BotoGP do
     pipe_through :api
     resources "/circuits", CircuitController
     options "/circuits", CircuitController, :options

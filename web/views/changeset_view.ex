@@ -1,11 +1,11 @@
-defmodule SomedayIsle.ChangesetView do
-  use SomedayIsle.Web, :view
+defmodule BotoGP.ChangesetView do
+  use BotoGP.Web, :view
 
   @doc """
   Traverses and translates changeset errors.
 
   See `Ecto.Changeset.traverse_errors/2` and
-  `SomedayIsle.ErrorHelpers.translate_error/1` for more details.
+  `BotoGP.ErrorHelpers.translate_error/1` for more details.
   """
   def translate_errors(changeset) do
     Ecto.Changeset.traverse_errors(changeset, &translate_error/1)

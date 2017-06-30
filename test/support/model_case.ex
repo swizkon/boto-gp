@@ -1,4 +1,4 @@
-defmodule SomedayIsle.ModelCase do
+defmodule BotoGP.ModelCase do
   @moduledoc """
   This module defines the test case to be used by
   model tests.
@@ -16,20 +16,20 @@ defmodule SomedayIsle.ModelCase do
 
   using do
     quote do
-      alias SomedayIsle.Repo
+      alias BotoGP.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import SomedayIsle.ModelCase
+      import BotoGP.ModelCase
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(SomedayIsle.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(BotoGP.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(SomedayIsle.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(BotoGP.Repo, {:shared, self()})
     end
 
     :ok
@@ -59,7 +59,7 @@ defmodule SomedayIsle.ModelCase do
   """
   def errors_on(struct, data) do
     struct.__struct__.changeset(struct, data)
-    |> Ecto.Changeset.traverse_errors(&SomedayIsle.ErrorHelpers.translate_error/1)
+    |> Ecto.Changeset.traverse_errors(&BotoGP.ErrorHelpers.translate_error/1)
     |> Enum.flat_map(fn {key, errors} -> for msg <- errors, do: {key, msg} end)
   end
 end

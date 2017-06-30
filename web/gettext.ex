@@ -1,11 +1,11 @@
-defmodule SomedayIsle.Gettext do
+defmodule BotoGP.Gettext do
   @moduledoc """
   A module providing Internationalization with a gettext-based API.
 
   By using [Gettext](https://hexdocs.pm/gettext),
   your module gains a set of macros for translations, for example:
 
-      import SomedayIsle.Gettext
+      import BotoGP.Gettext
 
       # Simple translation
       gettext "Here is the string to translate"
@@ -20,5 +20,5 @@ defmodule SomedayIsle.Gettext do
 
   See the [Gettext Docs](https://hexdocs.pm/gettext) for detailed usage.
   """
-  use Gettext, otp_app: :someday_isle
+  use Gettext, otp_app: :boto_gp
 end

@@ -1,4 +1,4 @@
-# SomedayIsle
+# BotoGP
 
 To start your Phoenix app:
 
