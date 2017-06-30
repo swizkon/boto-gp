@@ -3,8 +3,8 @@
 <ul>
 
   <li>
-    <strong>Title:</strong>
-    <%= @racer.title %>
+    <strong>Name:</strong>
+    <%= @racer.name %>
   </li>
 
   <li>
@@ -13,8 +13,8 @@
   </li>
 
   <li>
-    <strong>Journey:</strong>
-    <%= @racer.journey_id %>
+    <strong>Number:</strong>
+    <%= @racer.number %>
   </li>
 
 </ul>

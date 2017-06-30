@@ -1,6 +1,7 @@
-<h2>New racerss</h2>
+<h2>New racer</h2>
 
-<%= render "form.html", changeset: @changeset,
+<%= render "form.html", changeset: @changeset, 
+
                         action: racer_path(@conn, :create) %>
 
 <%= link "Back", to: racer_path(@conn, :index) %>
