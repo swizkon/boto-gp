@@ -44,6 +44,7 @@ defmodule BotoGP.Router do
   scope "/endurance", BotoGP do  
     pipe_through :browser # Use the default browser stack
     get "/edit/:id", EnduranceController, :edit
+    get "/practice/:id", EnduranceController, :practice
     get "/", EnduranceController, :index
     get "/new", EnduranceController, :new
     get "/race/:id", EnduranceController, :show

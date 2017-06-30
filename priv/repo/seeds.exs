@@ -12,6 +12,7 @@
 
 alias BotoGP.Repo
 alias BotoGP.Racer
+alias BotoGP.Circuit
 
 Repo.insert! %Racer{
     name: "Swizkon", 
@@ -37,3 +38,20 @@ Repo.insert! %Racer{
     description: "A racer",
     number: "23"
 }
+
+Repo.insert! %Circuit{
+    name: "Le Mans", 
+    width: 300,
+    height: 200,
+    scale: 3,
+    checkpoints: "[[150,20],[130,20]]"
+}
+
+Repo.insert! %Circuit{
+    name: "Assen TT", 
+    width: 300,
+    height: 200,
+    scale: 3,
+    checkpoints: "[[150,20],[130,20]]"
+}
+#      add :datamap, :jsonb

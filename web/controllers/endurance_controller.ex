@@ -8,14 +8,20 @@ defmodule BotoGP.EnduranceController do
     render(conn, "index.html", circuits: circuits)
   end
 
-  #def new(conn, _params) do
-  #  changeset = Circuit.changeset(%Circuit{})
-  #  render(conn, "new.html", changeset: changeset)
-  #end
+  def new(conn, _params) do
+    changeset = Circuit.changeset(%Circuit{})
+    render(conn, "new.html", changeset: changeset)
+  end
 
   def edit(conn, %{"id" => circuitid}) do
     circuit = Repo.get!(Circuit, circuitid)
     render(conn, "edit.html", circuit: circuit)
+  end
+
+  def practice(conn, %{"id" => circuitid}) do
+    circuit = Repo.get!(Circuit, circuitid)
+    circuits = Repo.all(Circuit) # |> Enum.map(&{&1.name, &1.id})
+    render(conn, "practice.html", circuit: circuit, circuits: circuits)
   end
 
   #def show(conn, %{"id" => circuitid}) do

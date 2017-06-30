@@ -1,8 +1,20 @@
-<h1><%= @circuit.name %> <small> - edit</small></h1>
+<h1><%= @circuit.name %> <small> - practice</small></h1>
 
 <hr />
-
 <%= link "Back", to: endurance_path(@conn, :index), class: "btn btn-default" %>
+
+<hr />
+Test another circuit:
+
+<%= for c <- @circuits do %>
+
+<%= link c.name, to: endurance_path(@conn, :practice, c) %>
+
+<% end %>
+</div>
+
+<hr/>
+
 
 <div class="jumbotron circuit-preview">
   <canvas style="border:solid 1px gray;"

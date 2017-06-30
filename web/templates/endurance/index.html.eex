@@ -7,15 +7,16 @@
   <h1><%= circuit.name %></h1>
   <canvas class="circuit-preview" 
     id="circuit-preview-<%= circuit.id %>" 
-    width="540" height="270" 
-    data-scale="3"
+    width="600" height="400" 
+    data-scale="2"
     data-checkpoints="<%= circuit.checkpoints %>"></canvas>
 
   <%= link "New race on this circuit", to: endurance_path(@conn, :show, circuit), class: "btn btn-primary btn-lg" %>
-  <%= link "Modify", to: endurance_path(@conn, :edit, circuit), class: "btn btn-default" %>
+  <%= link "Practice", to: endurance_path(@conn, :practice, circuit), class: "btn btn-default" %>
+<%= link "Modify", to: endurance_path(@conn, :edit, circuit), class: "btn btn-default" %>
 </div>
 
 <% end %>
 
 <hr />
-<%= link "New circuit", to: circuit_path(@conn, :new) %>
+<%= link "New circuit", to: endurance_path(@conn, :new) %>
