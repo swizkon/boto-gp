@@ -9,3 +9,11 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+alias BotoGP.Repo
+alias BotoGP.Racer
+
+Repo.insert! %Racer{
+    name: "Jonas", 
+    description: "A racer"
+}

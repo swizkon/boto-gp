@@ -1,6 +1,0 @@
-<h2>Edit pitstop</h2>
-
-<%= render "form.html", changeset: @changeset,
-                        action: pitstop_path(@conn, :update, @pitstop) %>
-
-<%= link "Back", to: pitstop_path(@conn, :index) %>

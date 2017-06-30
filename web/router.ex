@@ -30,15 +30,15 @@ defmodule BotoGP.Router do
     put "/:journeyid", JourneyController, :update
   end
 
-  scope "/pitstops", BotoGP do  
+  scope "/racers", BotoGP do  
     pipe_through :browser # Use the default browser stack
-    get "/edit/:id", PitstopController, :edit
-    get "/", PitstopController, :index
-    get "/new", PitstopController, :new
-    get "/:id", PitstopController, :show
-    delete "/:id", PitstopController, :delete
-    post "/", PitstopController, :create
-    put "/:id", PitstopController, :update
+    get "/edit/:id", RacerController, :edit
+    get "/", RacerController, :index
+    get "/new", RacerController, :new
+    get "/:id", RacerController, :show
+    delete "/:id", RacerController, :delete
+    post "/", RacerController, :create
+    put "/:id", RacerController, :update
   end
 
   scope "/endurance", BotoGP do  

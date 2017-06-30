@@ -1,4 +1,5 @@
-# BotoGP
+# Boto GP
+## Some sort of race application
 
 To start your Phoenix app:
 

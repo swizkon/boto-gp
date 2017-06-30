@@ -1,10 +1,10 @@
-defmodule BotoGP.Pitstop do
+defmodule BotoGP.Racer do
   use BotoGP.Web, :model
 
-  schema "pitstops" do
-    field :title, :string
+  schema "racers" do
+    field :name, :string
     field :description, :string
-    belongs_to :journey, BotoGP.Journey
+    field :colors, :string
 
     timestamps()
   end
@@ -14,7 +14,7 @@ defmodule BotoGP.Pitstop do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:title, :description])
-    |> validate_required([:title, :description])
+    |> cast(params, [:name, :description])
+    |> validate_required([:name, :description])
   end
 end

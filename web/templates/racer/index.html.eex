@@ -1,0 +1,30 @@
+<h2>Listing racers</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Journey</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for racer <- @racers do %>
+    <tr>
+      <td><%= racer.title %></td>
+      <td><%= racer.description %></td>
+      <td><%= racer.journey_id %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: racer_path(@conn, :show, racer), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: racer_path(@conn, :edit, racer), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: racer_path(@conn, :delete, racer), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New racer", to: racer_path(@conn, :new) %>

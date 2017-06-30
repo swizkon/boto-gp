@@ -1,0 +1,23 @@
+<h2>Show racer</h2>
+
+<ul>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @racer.title %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @racer.description %>
+  </li>
+
+  <li>
+    <strong>Journey:</strong>
+    <%= @racer.journey_id %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: racer_path(@conn, :edit, @racer) %>
+<%= link "Back", to: racer_path(@conn, :index) %>

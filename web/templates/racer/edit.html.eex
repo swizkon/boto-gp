@@ -1,0 +1,6 @@
+<h2>Edit racer</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: racer_path(@conn, :update, @racer) %>
+
+<%= link "Back", to: racer_path(@conn, :index) %>
