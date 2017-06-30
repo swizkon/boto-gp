@@ -4,6 +4,7 @@ defmodule BotoGP.Racer do
   schema "racers" do
     field :name, :string
     field :description, :string
+    field :number, :string
     field :colors, :string
 
     timestamps()
@@ -14,7 +15,7 @@ defmodule BotoGP.Racer do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:name, :description])
+    |> cast(params, [:name, :number, :description])
     |> validate_required([:name, :description])
   end
 end

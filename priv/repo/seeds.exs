@@ -14,6 +14,26 @@ alias BotoGP.Repo
 alias BotoGP.Racer
 
 Repo.insert! %Racer{
-    name: "Jonas", 
-    description: "A racer"
+    name: "Swizkon", 
+    description: "A racer",
+    number: "666"
+}
+
+Repo.insert! %Racer{
+    name: "Malloc Frobnitz", 
+    description: "A racer",
+    number: "69"
+}
+
+Repo.insert! %Racer{
+    name: "The Doctor", 
+    description: "A racer",
+    number: "46"
+}
+
+
+Repo.insert! %Racer{
+    name: "Guy Martin", 
+    description: "A racer",
+    number: "23"
 }
