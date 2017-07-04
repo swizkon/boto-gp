@@ -20,12 +20,12 @@ class="circuit-checkpoints" type="text" value="<%= @circuit.checkpoints %>" /></
 
 		<div class="row">
 			<div class="col-md-12">
-				<canvas id="circuit" width="900" height="450" style="border:solid 1px white;"></canvas>
-				<canvas id="preview" width="900" height="450" style="border:solid 1px white;"></canvas>
-				<svg id="preview" width="900" height="450" xmlns="http://www.w3c.org.200/svg" style="border:solid 1px white;">
+				<canvas data-circuit-id="<%= @circuit.id %>" id="circuit" width="150" height="100" style="border:solid 1px white;"></canvas>
+				<canvas data-circuit-id="<%= @circuit.id %>" id="preview" width="150" height="100" style="border:solid 1px white;"></canvas>
+				<svg data-circuit-id="<%= @circuit.id %>" id="preview" width="150" height="100" xmlns="http://www.w3c.org.200/svg" style="border:solid 1px white;">
 					<circle id="circle1" cx="25" cy="75" r="5" stroke="#00ff00" fill="#fff" stroke-width="2" style="opacity: 0.8;" />
 				</svg>
-				<div id="hits" width="600" height="450" style="border:solid 1px white;">#hits</div>
-				<canvas id="plotter" width="600" height="400" style="border:solid 1px white;"></canvas>
+				<div data-circuit-id="<%= @circuit.id %>" id="hits" width="600" height="50" style="border:solid 1px white;">#hits</div>
+				<canvas data-circuit-id="<%= @circuit.id %>" id="plotter" width="600" height="400" style="border:solid 1px white;"></canvas>
 			</div>
 		</div>
