@@ -47,10 +47,13 @@ BotoGP.repo = {
     changeCheckpoints: function (id, checkpoints) {
         BotoGP.repo.change(id, { "checkpoints": checkpoints });
     },
+    changeDatamap: function (id, datamap) {
+        BotoGP.repo.change(id, { "datamap": datamap });
+    },
     change: function (id, changes) {
         $.ajax({
             type: "PUT",
-            url: "http://localhost:4000/api/circuits/" + id,
+            url: "/api/circuits/" + id,
             contentType: "application/json",
             data: JSON.stringify({
                 "circuit": changes
@@ -80,7 +83,6 @@ var previewCanvasContext = previewCanvas.getContext("2d");
 var clickEvent$ = Rx.Observable.fromEvent($('canvas#circuit'), 'click');
 
 var nameChange$ = Rx.Observable.fromEvent($('h2 input.circuit-name'), 'keyup')
-    // .debounce(() => Rx.Observable.timer(500))
     .debounceTime(500)
     .distinctUntilChanged()
     .map(function (e) {
@@ -192,6 +194,16 @@ $(document).ready(function () {
 				
 				circuitModel.heat = pointsOfInterest["heat"];
 
+                 BotoGP.repo.changeDatamap(1,{
+								"checkpoints": circuitModel.checkpoints,
+								"dimensions": {
+									"width": circuitModel.width,
+									"height": circuitModel.height,
+									"scale": circuitModel.scale
+								},
+								"heat": circuitModel.heat
+							});
+
 				$('#serialized').text(JSON.stringify(circuitModel));
 			});
 
@@ -207,7 +219,7 @@ $(document).ready(function () {
     });
 
     Rx.Observable.fromEvent($('h2 input.circuit-checkpoints'), 'change')
-        .debounce(() => Rx.Observable.timer(500))
+        .debounceTime(500)
         .subscribe(function (e) {
             $('h1.circuit-checkpoints').text(e.target.value);
             BotoGP.repo.changeCheckpoints($(e.target).data("circuit-id"), e.target.value);
