@@ -1,10 +1,13 @@
-<h1><%= @circuit.name %> <small> - edit</small></h1>
+<h1 class="circuit-name"><%= @circuit.name %></h1>
+<h2><input data-circuit-id="<%= @circuit.id %>" class="circuit-name" type="text" value="<%= @circuit.name %>" /></h2>
+<h2><input data-circuit-id="<%= @circuit.id %>" 
+class="circuit-checkpoints" type="text" value="<%= @circuit.checkpoints %>" /></h2>
 
 <hr />
 
 <%= link "Back", to: endurance_path(@conn, :index), class: "btn btn-default" %>
 
-<div class="jumbotron circuit-preview">
+<div class="jumbotron circuit-preview" >
   <canvas style="border:solid 1px gray;"
     class="circuit-preview" 
     id="circuit-preview-<%= @circuit.id %>" 
@@ -22,7 +25,7 @@
 				<svg id="preview" width="900" height="450" xmlns="http://www.w3c.org.200/svg" style="border:solid 1px white;">
 					<circle id="circle1" cx="25" cy="75" r="5" stroke="#00ff00" fill="#fff" stroke-width="2" style="opacity: 0.8;" />
 				</svg>
-				<div id="hits" width="900" height="450" style="border:solid 1px white;"></div>
-				<canvas id="plotter" width="900" height="450" style="border:solid 1px white;"></canvas>
+				<div id="hits" width="600" height="450" style="border:solid 1px white;">#hits</div>
+				<canvas id="plotter" width="600" height="400" style="border:solid 1px white;"></canvas>
 			</div>
 		</div>
