@@ -44,7 +44,7 @@ Repo.insert! %Circuit{
     width: 300,
     height: 200,
     scale: 3,
-    checkpoints: "[[150,20],[130,20]]"
+    checkpoints: "[[150,20],[130,20],[30,50],[50,80],[20,180]]"
 }
 
 Repo.insert! %Circuit{

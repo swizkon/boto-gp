@@ -3,7 +3,7 @@
 <hr />
 <%= link "Back", to: endurance_path(@conn, :index), class: "btn btn-default" %>
 
-<hr />
+
 Test another circuit:
 
 <%= for c <- @circuits do %>
@@ -16,25 +16,52 @@ Test another circuit:
 <hr/>
 
 
+<div class="row">
+	<div class="col-md-8">
+
 <div class="jumbotron circuit-preview">
+
   <canvas style="border:solid 1px gray;"
-    class="circuit-preview" 
+    class="circuit-preview pull-left" 
     id="circuit-preview-<%= @circuit.id %>" 
     width="600" height="400" 
     data-scale="2"
     data-checkpoints="<%= @circuit.checkpoints %>"></canvas>
 
+	<table class="pull-right">
+		<tr>
+			<td><a href="#" class="btn btn-default btn-large">&nwarr;</a></td>
+			<td><a href="#" class="btn btn-default btn-large">&uarr;</a></td>
+			<td><a href="#" class="btn btn-default btn-large">&nearr;</a></td>
+		</tr>
+		<tr>
+			<td><a href="#" class="btn btn-default btn-large">&larr;</a></td>
+			<td><a href="#" class="btn btn-default btn-large">X</a></td>
+			<td><a href="#" class="btn btn-default btn-large">&rarr;</a></td>
+		</tr>
+		<tr>
+			<td><a href="#" class="btn btn-default btn-large">&swarr;</a></td>
+			<td><a href="#" class="btn btn-default btn-large">&darr;</a></td>
+			<td><a href="#" class="btn btn-default btn-large">&searr;</a></td>
+		</tr>
+	</table>
 </div>
 
+	</div>
+</div>
 
-		<div class="row">
-			<div class="col-md-12">
-				<canvas id="circuit" width="900" height="450" style="border:solid 1px white;"></canvas>
-				<canvas id="preview" width="900" height="450" style="border:solid 1px white;"></canvas>
-				<svg id="preview" width="900" height="450" xmlns="http://www.w3c.org.200/svg" style="border:solid 1px white;">
+<hr />
+<div id="state">
+Loading state...
+</div>
+<hr />
+
+				<canvas id="circuit" width="150" height="100" style="border:solid 1px white;"></canvas>
+				<canvas id="preview" width="150" height="100" style="border:solid 1px white;"></canvas>
+				<svg id="preview" width="150" height="100" xmlns="http://www.w3c.org.200/svg" style="border:solid 1px white;">
 					<circle id="circle1" cx="25" cy="75" r="5" stroke="#00ff00" fill="#fff" stroke-width="2" style="opacity: 0.8;" />
 				</svg>
-				<div id="hits" width="900" height="450" style="border:solid 1px white;"></div>
-				<canvas id="plotter" width="900" height="450" style="border:solid 1px white;"></canvas>
-			</div>
-		</div>
+				<canvas id="plotter" width="150" height="100" style="border:solid 1px white;"></canvas>
+
+<div id="hits" style="border:solid 1px white;width:150px;height:100px"></div>
+				
