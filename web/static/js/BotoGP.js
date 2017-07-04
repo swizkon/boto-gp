@@ -106,7 +106,7 @@ nameChange$.subscribe(function (d) {
         }
     }).startWith({ 'x': circuitWidth / 2, 'y': 20 });
 
-var scale = 3;
+var scale = 4;
 var circuitWidth = 150 / scale, circuitHeight = 100 / scale;
 
 $(document).ready(function () {
