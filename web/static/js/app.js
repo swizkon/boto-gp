@@ -20,6 +20,6 @@ import "phoenix_html"
 
 import socket from "./socket"
 
-import circuit from "./circuit"
+// import circuit from "./circuit"
 
 import BotoGP from "./BotoGP"

@@ -1,7 +1,8 @@
-<h1 class="circuit-name"><%= @circuit.name %></h1>
+<h1 class="circuit-name" data-circuit-id="<%= @circuit.id %>" ><%= @circuit.name %></h1>
 <h2><input data-circuit-id="<%= @circuit.id %>" class="circuit-name" type="text" value="<%= @circuit.name %>" /></h2>
-<h2><input data-circuit-id="<%= @circuit.id %>" 
+<h2><input style="font-size:14pt;width:100%;" data-circuit-id="<%= @circuit.id %>" 
 class="circuit-checkpoints" type="text" value="<%= @circuit.checkpoints %>" /></h2>
+<h1 class="circuit-checkpoints" data-circuit-id="<%= @circuit.id %>" ><%= @circuit.checkpoints %></h1>
 
 <hr />
 

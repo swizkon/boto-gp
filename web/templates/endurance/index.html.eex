@@ -7,8 +7,7 @@
   <h1><%= circuit.name %></h1>
   <canvas class="circuit-preview" 
     id="circuit-preview-<%= circuit.id %>" 
-    width="600" height="400" 
-    data-scale="2"
+    width="600" height="400"
     data-checkpoints="<%= circuit.checkpoints %>"></canvas>
 
   <%= link "New race on this circuit", to: endurance_path(@conn, :show, circuit), class: "btn btn-primary btn-lg" %>

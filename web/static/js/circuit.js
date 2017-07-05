@@ -22,8 +22,8 @@ let circuit = {
         context.clearRect(0, 0, canvas.width, canvas.height);
         context.translate(0.0, 0.0);
         
-        circuit.drawPath(context, 20 * scale, "#999", points);
-        circuit.drawPath(context, 15 * scale, "#ccc", points);
+        circuit.drawPath(context, 15 * scale, "#ddd", points);
+        circuit.drawPath(context, 20 * scale, "rgba(200,200,200,0.5)", points);
     },
 
     drawPath: function(context, lineWidth, color, points){
@@ -42,7 +42,7 @@ let circuit = {
 }
 
 $(document).ready(function () {
-    circuit.renderPreviews();
+    // circuit.renderPreviews();
 });
 
 export default circuit
