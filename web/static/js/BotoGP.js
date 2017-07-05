@@ -9,15 +9,8 @@ BotoGP.DefaultHeight = 100;
 BotoGP.printer = {
 
     renderPreviews: function () {
-        $('canvas.circuit-preview, canvas#preview').each((i, m) => {
+        $('canvas.circuit-preview').each((i, m) => {
             var points = $(m).data('checkpoints');
-            /*points = $.map(points, (o, i) => {
-                return {
-                    x: o[0] * scale,
-                    y: o[1] * scale
-                }
-            });
-            */
             BotoGP.printer.drawPreview(m, points);
         });
     },
@@ -65,6 +58,8 @@ BotoGP.designer = {
         // || inpath != context.isPointInStroke(x, y + 1);
     },
     pointsOfInterest: function (canvas) {
+        if(!canvas)
+        return {};
         var context = canvas.getContext("2d");
         var x, y, pointsOfInterest = { "on": [], "off": [], "heat": {} };
         for (y = 0; y < canvas.height; y += 1) {
@@ -131,8 +126,8 @@ var points = [];
 // var canvas = document.querySelector("canvas#circuit");
 // var canvasContext = canvas.getContext("2d");
 
-var previewCanvas = document.querySelector("canvas#preview");
-var previewCanvasContext = previewCanvas.getContext("2d");
+// var previewCanvas = document.querySelector("canvas#preview");
+// var previewCanvasContext = previewCanvas.getContext("2d");
 
 var clickEvent$ = Rx.Observable.fromEvent($('canvas#circuit'), 'click');
 
@@ -153,10 +148,13 @@ var pointsChange$ = pointClick$.scan(function (acc, value, index) {
 pointsChange$.subscribe(console.log);
 
 pointsChange$.subscribe(function (value) {
-    $('canvas.circuit-preview').each((i, m) => {
+    $('canvas.circuit-preview, canvas#preview').each((i, m) => {
         BotoGP.printer.drawPreview(m, value);
     });
 
+    var previewCanvas = document.querySelector("canvas#preview");
+    if(!previewCanvas)
+    return;
     var pointsOfInterest = BotoGP.designer.pointsOfInterest(previewCanvas);
     var circuitId = $('h1.circuit-name').data("circuit-id");
     BotoGP.repo.change(circuitId,
@@ -172,6 +170,8 @@ pointsChange$.subscribe(function (value) {
 pointsChange$.subscribe(function (value) {
     var point = value[value.length - 1];
     var canvas = document.querySelector("canvas#circuit");
+    if(!canvas)
+    return;
     var canvasContext = canvas.getContext("2d");
     canvasContext.lineTo(point[0], point[1]);
     canvasContext.lineWidth = 9 / scale;
@@ -274,7 +274,13 @@ $(document).ready(function () {
     pointClick$.subscribe(function (p) {
 
         var canvas = document.querySelector("canvas#plotter");
+        if(!canvas)
+            return;
         var canvasContext = canvas.getContext("2d");
+
+    var previewCanvas = document.querySelector("canvas#preview");
+    if(!previewCanvas)
+    return;
 
         canvasContext.clearRect(0, 0, canvas.width * scale, canvas.height * scale);
         canvasContext.translate(0.0, 0.0);
@@ -293,7 +299,7 @@ $(document).ready(function () {
         $.each(pointsOfInterest["on"], function (index, point) {
             canvasContext.beginPath();
             canvasContext.arc(point.x * scale, point.y * scale, radius, 0, 2 * Math.PI, false);
-            contcanvasContextext.fill();
+            canvasContext.fill();
         });
 
         // circuitModel.checkpoints = points.map(function (p) {
