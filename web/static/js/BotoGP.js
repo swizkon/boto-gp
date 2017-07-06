@@ -320,26 +320,21 @@ $(document).ready(function () {
 
 
 
-    Rx.Observable.fromEvent($('canvas#preview'), 'mousemove').subscribe(function (e) {
+    Rx.Observable.fromEvent($('canvas.circuit-preview'), 'mousemove').subscribe(function (e) {
+
+        var scale = e.target.width / BotoGP.DefaultWidth;
+        
         var x = e.offsetX, y = e.offsetY;
-        $('#circle1').attr('cy', y);
-        $('#circle1').attr('cx', x);
+        $('#circle1').attr('cy', y / scale);
+        $('#circle1').attr('cx', x / scale);
 
         var inpath = e.target.getContext("2d").isPointInStroke(x, y);
         $('#circle1').attr('stroke', inpath ? '#00ff00' : '#ff0000');
     });
-
-    /*
-    Rx.Observable.fromEvent($('h2 input.circuit-checkpoints'), 'change')
-        .debounceTime(500)
-        .subscribe(function (e) {
-            $('h1.circuit-checkpoints').text(e.target.value);
-            BotoGP.repo.changeCheckpoints($(e.target).data("circuit-id"), e.target.value);
-        });
-        */
-
-    Rx.Observable.fromEvent($('canvas#preview'), 'click').subscribe(function (e) {
-        var x = e.offsetX, y = e.offsetY;
+    
+    Rx.Observable.fromEvent($('canvas.circuit-preview'), 'click').subscribe(function (e) {
+        var scale = e.target.width / BotoGP.DefaultWidth;
+        var x = Math.round( e.offsetX / scale), y = Math.round(e.offsetY / scale);
         $.get("/api/circuits/" + $(e.target).data("circuit-id") + "/tileinfo?x=" + x + "&y=" + y, function (d) {
             $("#hits").text(d);
         }

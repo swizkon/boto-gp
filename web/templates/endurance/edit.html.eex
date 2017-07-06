@@ -2,14 +2,14 @@
 <h2><input data-circuit-id="<%= @circuit.id %>" class="circuit-name" type="text" value="<%= @circuit.name %>" /></h2>
 <h2><input style="font-size:14pt;width:100%;" data-circuit-id="<%= @circuit.id %>" 
 class="circuit-checkpoints" type="text" value="<%= @circuit.checkpoints %>" /></h2>
-<h1 class="circuit-checkpoints" data-circuit-id="<%= @circuit.id %>" ><%= @circuit.checkpoints %></h1>
+<h1 class="circuit-checkpoints" data-circuit-id="<%= @circuit.id %>"><%= @circuit.checkpoints %></h1>
 
 <hr />
 
 <%= link "Back", to: endurance_path(@conn, :index), class: "btn btn-default" %>
 
 <div class="jumbotron circuit-preview" >
-  <canvas style="border:solid 1px gray;"
+  <canvas data-circuit-id="<%= @circuit.id %>" style="border:solid 1px gray;"
     class="circuit-preview" 
     id="circuit-preview-<%= @circuit.id %>" 
     width="600" height="400" 
