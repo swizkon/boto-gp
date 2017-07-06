@@ -7,22 +7,27 @@ defmodule BotoGP.CircuitController do
     conn
   end
 
-  def tileinfo(conn, %{"id" => id, "x" => x, "y" => y}) do
-    circuit = Repo.get!(Circuit, id)
-    row = circuit.datamap["heat"][y]
+  def tileinfo(conn, %{"id" => circuit_id, "x" => x, "y" => y}) do
+    
+    heat = HeatCache.Cache.fetch(circuit_id, fn -> 
+      IO.puts "Actual read..."
+       Repo.get!(Circuit, circuit_id).datamap["heat"]
+      end)
+
+    row = heat[y]
     tile = calc_tile(row, String.to_integer(x))
     text conn, tile
   end
 
-  defp calc_tile(:nil, x), do: "Out" # "No match on this row, fried.."
-  defp calc_tile(row, -1), do: "Out" # "No match on this col"
+  defp calc_tile(:nil, _), do: "Out" # "No match on this row, fried.."
+  defp calc_tile(_, -1), do: "Out" # "No match on this col"
   defp calc_tile(row, x) do
     tile = row[Integer.to_string(x)]
     calc_tile(row, tile, x - 1)
   end
 
-  defp calc_tile(row, 1, x), do: "Hit"
-  defp calc_tile(row, 0, x), do: "Out"
+  defp calc_tile(_, 1, _), do: "Hit"
+  defp calc_tile(_, 0, _), do: "Out"
   defp calc_tile(row, :nil, x) do
     calc_tile(row, x)
   end
@@ -59,6 +64,9 @@ defmodule BotoGP.CircuitController do
 
     case Repo.update(changeset) do
       {:ok, circuit} ->
+        IO.puts id
+        # IO.puts circuit.datamap["heat"]
+        HeatCache.Cache.set(id, circuit.datamap["heat"])
         render(conn, "show.json", circuit: circuit)
       {:error, changeset} ->
         conn

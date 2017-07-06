@@ -14,6 +14,7 @@ defmodule BotoGP do
       supervisor(BotoGP.Endpoint, []),
       # Start your own worker by calling: BotoGP.Worker.start_link(arg1, arg2, arg3)
       # worker(BotoGP.Worker, [arg1, arg2, arg3]),
+      supervisor(HeatCache.Supervisor, []),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
