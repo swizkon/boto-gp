@@ -49,7 +49,3 @@ defmodule HeatCache.Cache do
   end
 
 end
-
-
-#    circuit = Repo.get!(Circuit, id)
-#    circuit.datamap["heat"]
