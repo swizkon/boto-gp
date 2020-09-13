@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BotoGP.Web", "BotoGP.Web\BotoGP.Web.csproj", "{33966674-C4C7-4F38-BC30-9E804B725D43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotoGP.Domain", "BotoGP.Domain\BotoGP.Domain.csproj", "{94086B3C-95DE-4003-B3B9-A53CE51F9C6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33966674-C4C7-4F38-BC30-9E804B725D43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33966674-C4C7-4F38-BC30-9E804B725D43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33966674-C4C7-4F38-BC30-9E804B725D43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33966674-C4C7-4F38-BC30-9E804B725D43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94086B3C-95DE-4003-B3B9-A53CE51F9C6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94086B3C-95DE-4003-B3B9-A53CE51F9C6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94086B3C-95DE-4003-B3B9-A53CE51F9C6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94086B3C-95DE-4003-B3B9-A53CE51F9C6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84AAED3E-B363-4C31-A585-E4126D1273E8}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,59 @@
+﻿/* This file is for your main application css. */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+span.logo{
+    font-size:3em;
+}
+
+/*
+My stuff
+*/
+body, div.jumbotron
+{
+    background-color: #333;
+}
+div.jumbotron
+{
+    margin-bottom: 0;
+    padding: 1rem;
+}
+
+h1, h2, h3, h4 {
+    text-shadow: 0em 0em 0.3em #000;
+    margin-bottom: .5rem;
+    font-weight: 100;
+    color: #aaa;
+}
+
+h1 small {
+    text-align: center;
+    text-shadow: 0em 0em 0.3em #000;
+    margin-bottom: .5rem;
+    font-weight: 100;
+}
+
+/*
+img.circuit{
+    width:600px;
+    height:400px;
+}
+*/
+
+/*
+canvas {
+    border:solid 1px rgb(109, 105, 105);
+}
+*/
+
+@media screen and (max-width: 480px) {
+body, div.jumbotron
+{
+    background-color: #fff;
+}
+}
