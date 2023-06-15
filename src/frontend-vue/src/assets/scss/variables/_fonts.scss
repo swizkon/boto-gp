@@ -1,0 +1,64 @@
+$opensans: "Open Sans";
+
+body {
+  font-family: $opensans;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: $textcolor;
+  > i {
+    font-size: 1em;
+  }
+}
+
+h1 {
+  font-family: $opensans;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 26.4px;
+  color: $textcolor;
+}
+
+h3 {
+  font-family: $opensans;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 15.4px;
+  color: $textcolor;
+}
+
+label {
+  font-family: $opensans;
+  font-size: 10px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 15px;
+  color: $textcolor;
+}
+
+blockquote {
+  font-family: $opensans;
+  font-size: 21px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 30px;
+  color: $textcolor;
+}
+
+pre {
+  font-family: $opensans;
+  font-size: 13px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 18.5714px;
+  color: $textcolor;
+}

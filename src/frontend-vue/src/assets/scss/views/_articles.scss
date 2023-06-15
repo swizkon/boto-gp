@@ -1,0 +1,40 @@
+.articles-view {
+  margin-left: 2rem;
+  > * {
+    margin-top: 2rem;
+    margin-right: 1rem;
+  }
+
+  > .filter-and-sort-box{
+    padding: 0 1rem 0 0 !important;
+    background: none !important;
+    .table{
+      padding: 0 !important;
+      th:last-of-type{
+        text-align: end;
+      }
+      tr.parent{
+        td:last-of-type{
+          text-align: right;
+        }
+      }
+    }
+    .subtable{
+      background-color: $primary-light;
+      width: 100%;
+      border-radius: 0.25rem;
+      border-collapse: collapse;
+      .input-wrapper{
+        padding: 0rem;
+      }
+      td{
+        padding: 1rem;
+      }
+      tr:not(:last-of-type){
+        td{
+          border-bottom: 1px solid $darkendtextcolor;
+        }
+      }
+    }
+  }
+}

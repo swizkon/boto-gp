@@ -1,0 +1,36 @@
+.accordion {
+  background-color: $primary-light;
+  border-radius: 6px;
+  border: 1px solid white;
+  .headerTable {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid white;
+  }
+  .accordionHeader {
+    position: relative;
+    cursor: pointer;
+    background: none;
+  }
+  td {
+    padding: 0px 8px;
+  }
+  td.right {
+    text-align: right;
+  }
+  .quantity {
+    padding: 8px 8px;
+  }
+  .accordionBody {
+    width: 100%;
+    overflow: hidden;
+    background-color: $primary-light;
+    border-top: 0;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    transition: 150ms ease-out;
+    .accordionBodyInner {
+      width: 100%;
+    }
+  }
+}

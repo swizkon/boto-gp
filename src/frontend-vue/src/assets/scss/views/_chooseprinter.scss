@@ -1,0 +1,106 @@
+.choose-printer-view {
+  margin-left: 2rem;
+  > * {
+    margin-top: 2rem;
+    margin-right: 1rem;
+  }
+
+  > .button-container{
+    display: flex;
+    float: right;
+  }
+
+  > .checkbox-container{
+    display: flex;
+    float: left;
+    >div{
+      color: $light-blue;
+      padding: 0.5rem;
+    }
+    input{
+      appearance: none;
+      background-color: none;
+      border: 2px solid $light-blue;
+      border-radius: 0.25rem;
+      padding: 0.8rem;
+      display: inline-block;
+      position: relative;
+      outline: none;
+      &:checked:after{
+        content: '\2713';
+        position: absolute;
+        font-size: 1.5rem;
+        text-anchor: start;
+        top: 2px;
+        left: 3px;
+      }
+    }
+  }
+
+  div.printers-container{
+    padding: 2rem;
+    background-color: $primary;
+    border-radius: 0.25rem;
+
+    &.configure-address {
+      .input-wrapper {
+        padding: 1em 0;
+        width: 400px;
+        margin-right: 2em;
+      }
+    }
+
+    .dropdown-wrapper {
+      width: 250px;
+    }
+
+    .printer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    > .filter-and-sort-box{
+      table{
+        width: 100%;
+        border-collapse:separate;
+        border-spacing:0 0.2rem !important;
+
+        td{
+          border: none !important;
+          background-color: $primary-light !important;
+          padding: 1rem;
+          select{
+            background-color: transparent;
+            border-color: white;
+            border-radius: 0.25rem;
+            width: 100%;
+            &:focus{
+              outline: none;
+            }
+          }
+        }
+        tr{
+          width: 100%;
+          td:first-of-type{
+            border-top-left-radius: 0.25rem;
+            border-bottom-left-radius: 0.25rem;
+          }
+          td:last-of-type{
+            border-top-right-radius: 0.25rem;
+            border-bottom-right-radius: 0.25rem;
+          }
+          td.selected{
+            background-color: $light-blue !important;
+          }
+          &:hover{
+            td{
+              background-color: $light-blue !important;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+/* Variables */
+@import 'variables/colors';
+@import 'variables/fonts';
+
+/* Shared classes */
+@import 'shared-classes/sharedclasses';
+
+/* Components */
+@import 'components/accordion';
+@import 'components/forms';
+@import 'components/popupprompt';
+
+/* Views */
+@import 'views/adduser';
+@import 'views/home';
+@import 'views/users';
+@import 'views/articles';
+@import 'views/addarticle';
+@import 'views/chooseprinter';
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Change the white to any color ;) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px #0f4164 inset !important;
+    -webkit-text-fill-color: #fff;
+    color: #fff !important;
+}
