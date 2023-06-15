@@ -13,6 +13,7 @@ namespace BotoGP.Engine
             for (var y = 0; y < fs.Size.Height; y++)
             {
                 var c = resized.GetPixel(x, y);
+
                 if (c.G > 50 || c.B > 50)
                     continue;
 
@@ -23,9 +24,29 @@ namespace BotoGP.Engine
             }
         }
 
-        public IEnumerable<Point> GetSignificantPoints()
+        public IEnumerable<Point> GetSignificantPoints(IEnumerable<Point> input)
         {
-            throw new NotImplementedException();
+            var h = new HashSet<Point>();
+            
+            var selection = input.Where(i => i.X % 2 == 0 && i.Y % 2 == 0);
+
+            foreach (var p in selection)
+            {
+                if (!h.Contains(p))
+                {
+                    h.Add(p);
+                    for (var i = 0; i < 20; i++)
+                    {
+                        h.Add(new Point(x: p.X + i, y: p.Y));
+                        h.Add(new Point(x: p.X, y: p.Y + i));
+                        h.Add(new Point(x: p.X + i, y: p.Y + i));
+                        h.Add(new Point(x: p.X - i, y: p.Y - i));
+                    }
+                    yield return p;
+                }
+            }
+
+            // return selection;
         }
     }
 }

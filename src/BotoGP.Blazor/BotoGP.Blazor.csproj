@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Update="wwwroot\circuits\jerez-2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\circuits\jerez-2b.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Update="wwwroot\circuits\jerez.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
