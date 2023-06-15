@@ -1,0 +1,58 @@
+﻿@using System.Net.Mime
+@using System.Drawing
+@using System.Drawing.Drawing2D
+@using System.Drawing.Imaging
+@using BotoGP.Engine
+<div class="alert alert-secondary mt-4">
+    <span class="oi oi-pencil me-2" aria-hidden="true"></span>
+    <strong>@Circuit</strong>
+    A way to track what we are tracing...
+    
+    @Debug
+</div>
+
+
+<img src="circuits/@Circuit" />
+
+@code {
+    // Demonstrates how a parent component can supply parameters
+    [Parameter]
+    public string? Circuit { get; set; }
+
+
+    public string? Debug { get; set; }
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        var filePath = Path.Combine(AppContext.BaseDirectory, "wwwroot", "circuits", Circuit!);
+        var f = await File.ReadAllBytesAsync(filePath);
+
+        Debug = f.Length.ToString();
+
+        var d = new CircuitParser().GetBoundariesFromImage(filePath);
+
+        Debug += " " + d.Count();
+
+        //var fs = System.Drawing.Image.FromFile(filePath);
+        //var resized = new Bitmap(fs, fs.Size.Width, fs.Size.Height);
+
+
+        //for (int i = 0; i < fs.Size.Width; i++)
+        //{
+        //    var c = resized.GetPixel(i, 30);
+        //    Console.WriteLine("R " + c.R + " G " + c.G + " B " + c.B);
+        //}
+
+
+        //using (var graphics = Graphics.FromImage(resized))
+        //{
+        //    graphics.CompositingQuality = CompositingQuality.HighSpeed;
+        //    graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+        //    graphics.CompositingMode = CompositingMode.SourceCopy;
+        //    graphics.DrawImage(fs, 0, 0, fs.Size.Width, fs.Size.Height);
+        //    // resized.Save($"resized-{file}", ImageFormat.Png);
+        //}
+
+    }
+}
