@@ -94,7 +94,7 @@ namespace BotoGP.Web
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
 
             app.UseDefaultFiles(new DefaultFilesOptions
             {
@@ -127,7 +127,12 @@ namespace BotoGP.Web
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-            });
+
+            })
+                .UseSignalR(routes =>
+                {
+                    routes.MapHub<BotoGP.Web.Hubs.RaceHub>("/race");
+                });
         }
     }
 }

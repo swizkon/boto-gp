@@ -14,7 +14,7 @@ namespace BotoGP.Web
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .UseContentRoot(Path.Combine(Directory.GetCurrentDirectory(), "frontend", "public"))
+                // .UseContentRoot(Path.Combine(Directory.GetCurrentDirectory(), "frontend", "public"))
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     //webBuilder.UseUrls()
@@ -24,3 +24,4 @@ namespace BotoGP.Web
                 });
     }
 }
+    
