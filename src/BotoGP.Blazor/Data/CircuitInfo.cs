@@ -1,6 +1,6 @@
 namespace BotoGP.Blazor.Data;
 
-public class WeatherForecast
+public class CircuitInfo
 {
     public string? Summary { get; set; }
 

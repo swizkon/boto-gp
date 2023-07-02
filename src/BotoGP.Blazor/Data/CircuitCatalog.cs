@@ -1,14 +1,14 @@
 namespace BotoGP.Blazor.Data;
 
-public class WeatherForecastService
+public class CircuitCatalog
 {
 
-    public Task<WeatherForecast[]> GetForecastAsync(DateOnly startDate)
+    public Task<CircuitInfo[]> GetCircuitsAsync(DateOnly startDate)
     {
         var files = Directory.GetFiles(AppContext.BaseDirectory, "*.jpg", SearchOption.AllDirectories);
         
 
-        return Task.FromResult(files.Select(f => new WeatherForecast
+        return Task.FromResult(files.Select(f => new CircuitInfo
         {
             Summary = Path.GetFileName(f),
 

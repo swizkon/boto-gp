@@ -1,32 +1,27 @@
 ﻿@page "/fetchdata"
 @using BotoGP.Blazor.Data
-@inject WeatherForecastService ForecastService
+@inject CircuitCatalog CircuitCatalog
 
 <PageTitle>Weather forecast</PageTitle>
 
-<h1>Weather forecast</h1>
+<h1>Circuits</h1>
 
 <p>This component demonstrates fetching data from a service.</p>
 
-@if (forecasts == null)
+@if (_circuits == null)
 {
     <p><em>Loading...</em></p>
 }
 else
 {
     <table class="table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Summary</th>
-            </tr>
-        </thead>
         <tbody>
-            @foreach (var forecast in forecasts)
+            @foreach (var forecast in _circuits)
             {
                 <tr>
-                    <td>@forecast.Points</td>
-                    <td>@forecast.Summary</td>
+                    <td>
+                        <CircuitLab Circuit=@forecast.Summary />
+                    </td>
                 </tr>
             }
         </tbody>
@@ -34,10 +29,10 @@ else
 }
 
 @code {
-    private WeatherForecast[]? forecasts;
+    private CircuitInfo[]? _circuits;
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await ForecastService.GetForecastAsync(DateOnly.FromDateTime(DateTime.Now));
+        _circuits = await CircuitCatalog.GetCircuitsAsync(DateOnly.FromDateTime(DateTime.Now));
     }
 }

@@ -45,8 +45,6 @@ namespace BotoGP.Engine
                     yield return p;
                 }
             }
-
-            // return selection;
         }
     }
 }
