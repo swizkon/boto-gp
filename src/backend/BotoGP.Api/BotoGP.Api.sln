@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BotoGP.Api", "BotoGP.Api.csproj", "{1A01913F-49BE-4158-B569-B73E5B023636}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A01913F-49BE-4158-B569-B73E5B023636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A01913F-49BE-4158-B569-B73E5B023636}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A01913F-49BE-4158-B569-B73E5B023636}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A01913F-49BE-4158-B569-B73E5B023636}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {570ABA25-A374-45D1-B817-18CB40E9D8C4}
+	EndGlobalSection
+EndGlobal
