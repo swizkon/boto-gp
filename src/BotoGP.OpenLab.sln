@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BotoGP.Blazor", "BotoGP.Bla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotoGP.Engine", "BotoGP.Engine\BotoGP.Engine.csproj", "{1D032EA9-BF32-4ABE-BA72-63EB0A343774}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotoGP.Domain", "BotoGP.Domain\BotoGP.Domain.csproj", "{2F9CC4A7-07FF-41BD-8820-11769B6D2FBB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1D032EA9-BF32-4ABE-BA72-63EB0A343774}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D032EA9-BF32-4ABE-BA72-63EB0A343774}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D032EA9-BF32-4ABE-BA72-63EB0A343774}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F9CC4A7-07FF-41BD-8820-11769B6D2FBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F9CC4A7-07FF-41BD-8820-11769B6D2FBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F9CC4A7-07FF-41BD-8820-11769B6D2FBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F9CC4A7-07FF-41BD-8820-11769B6D2FBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
