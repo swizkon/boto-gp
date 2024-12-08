@@ -3,16 +3,15 @@
 using System;
 using BotoGP.Domain.Models;
 using BotoGP.Domain.Repositories;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace BotoGP.Domain.Services
 {
-    using Microsoft.Extensions.Configuration;
-    using Microsoft.Extensions.Logging;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Net.Http;
-    using System.Threading.Tasks;
-
     public class CircuitRepository : ICircuitRepository
     {
         IConfiguration _configuration;
