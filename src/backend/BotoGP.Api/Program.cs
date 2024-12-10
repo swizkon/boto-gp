@@ -1,3 +1,5 @@
+using Serilog;
+
 namespace BotoGP.Api;
 
 public class Program
@@ -11,6 +13,9 @@ public class Program
         Host.CreateDefaultBuilder(args)
             .ConfigureWebHostDefaults(webBuilder =>
             {
+                //webBuilder.UseUrls()
+                webBuilder.UseSerilog();
                 webBuilder.UseStartup<Startup>();
+                webBuilder.UseStaticWebAssets();
             });
 }

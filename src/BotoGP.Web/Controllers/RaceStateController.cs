@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 
-
 using System.Collections.Concurrent;
 using BotoGP.Web.Hubs;
 using BotoGP.Domain.Models;

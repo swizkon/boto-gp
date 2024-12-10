@@ -26,7 +26,7 @@ public class CircuitsController : Controller
     {
         if (cache == null)
         {
-            var leMans = new Circuit()
+            var leMans = new Circuit
             {
                 Id = new Guid("a2cb2c01-e7c3-4f23-8148-85d8e7eb726a"),
                 Name = "Le Mans",
@@ -42,7 +42,7 @@ public class CircuitsController : Controller
                 }
             };
 
-            var assen = new Circuit()
+            var assen = new Circuit
             {
                 Id = new Guid("f1c0ce30-23e6-41c2-a7c7-27a468382d73"),
                 Name = "Assen TT",
