@@ -1,5 +1,3 @@
-using System;
-
 namespace BotoGP.Api;
 
 public record WeatherForecast(DateTime Date)

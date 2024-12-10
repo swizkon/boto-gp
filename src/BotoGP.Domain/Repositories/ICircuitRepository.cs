@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using BotoGP.Domain.Models;
+﻿using BotoGP.Domain.Models;
 
 namespace BotoGP.Domain.Repositories
 {

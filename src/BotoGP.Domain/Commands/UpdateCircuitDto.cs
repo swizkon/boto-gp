@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using BotoGP.Domain.Models;
 
 namespace BotoGP.Domain.Commands

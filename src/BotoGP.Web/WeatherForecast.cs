@@ -1,5 +1,3 @@
-using System;
-
 namespace BotoGP.Web
 {
     public class WeatherForecast

@@ -1,19 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using BotoGP.Domain.Repositories;
 using BotoGP.Domain.Services;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+using BotoGP.Web.Hubs;
 using Microsoft.Extensions.FileProviders;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
 namespace BotoGP.Web
@@ -127,12 +115,8 @@ namespace BotoGP.Web
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-
-            })
-                .UseSignalR(routes =>
-                {
-                    routes.MapHub<BotoGP.Web.Hubs.RaceHub>("/race");
-                });
+                endpoints.MapHub<RaceHub>("/race");
+            });
         }
     }
 }

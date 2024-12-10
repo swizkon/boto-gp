@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace BotoGP.Domain.Models
+﻿namespace BotoGP.Domain.Models
 {
     public class Circuit
     {
