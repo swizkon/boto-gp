@@ -16,4 +16,8 @@
 	  <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="5.5.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\BotoGP.Domain\BotoGP.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
