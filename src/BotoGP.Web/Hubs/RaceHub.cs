@@ -5,15 +5,9 @@ namespace BotoGP.Web.Hubs
 {
     public class RaceHub : Hub
     {
-        public Task Send(string message)
-        {
-            return Clients.All.SendAsync("Send", message);
-        }
+        public Task Send(string message) => Clients.All.SendAsync("Send", message);
 
-        public Task NextMove(string racer, int move)
-        {
-            return RaceStateChange(racer, 0, 0, move, move);
-        }
+        public Task NextMove(string racer, int move) => RaceStateChange(racer, 0, 0, move, move);
 
         public Task RaceStateChange(
             string racer, 
