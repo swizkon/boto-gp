@@ -1,7 +1,7 @@
 <script>
-	const env = import.meta.env;
 	import { onMount, onDestroy } from 'svelte';
 	import { browser } from '$app/environment';
+	import { formatUrl } from '$lib/env';
 
 	import { HubConnectionBuilder } from '@microsoft/signalr';
 
@@ -12,8 +12,7 @@
 	const toastStore = getToastStore();
 	const modalStore = getModalStore();
 
-	const baseUrl = env.PROD ? '' : 'https://localhost:7081';
-	const hubUrl = `${baseUrl}/hubs/monitorHub`;
+	const hubUrl = formatUrl('/hubs/monitorHub');
 
 	let signalRConnectionState = 'Unknown';
 	let signalRMessageCount = 0;
@@ -23,7 +22,7 @@
 	let connection;
 
 	async function refetch() {
-		data = await jsonRequest(`${baseUrl}/api/collaboration/${tenant}/value-streams`);
+		data = await jsonRequest(formatUrl(`/api/collaboration/${tenant}/value-streams`));
 	}
 
 	async function start() {

@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30406.217
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BotoGP.Web", "BotoGP.Web\BotoGP.Web.csproj", "{33966674-C4C7-4F38-BC30-9E804B725D43}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotoGP.Domain", "BotoGP.Domain\BotoGP.Domain.csproj", "{94086B3C-95DE-4003-B3B9-A53CE51F9C6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotoGP.Api", "backend\BotoGP.Api\BotoGP.Api.csproj", "{FE309BAD-2D1C-4D64-A57B-410F73B620A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{94086B3C-95DE-4003-B3B9-A53CE51F9C6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94086B3C-95DE-4003-B3B9-A53CE51F9C6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94086B3C-95DE-4003-B3B9-A53CE51F9C6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE309BAD-2D1C-4D64-A57B-410F73B620A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE309BAD-2D1C-4D64-A57B-410F73B620A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE309BAD-2D1C-4D64-A57B-410F73B620A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE309BAD-2D1C-4D64-A57B-410F73B620A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

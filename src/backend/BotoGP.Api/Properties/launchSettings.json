@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "BotoGP.Api": {
+    "dev": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,
